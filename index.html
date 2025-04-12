@@ -1,27 +1,50 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ - Помощь пользователям</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-item h3 {
+            margin: 0;
+            color: #007bff;
+        }
+        .faq-item p {
+            margin: 5px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>FAQ – Часто задаваемые вопросы</h1>
 
-{% block content %}
-<!-- наполнение главной страницы -->
-<div class="films-box">
-  {%for film in films%}
-    <!-- в ссылке вместо id подставить id фильма -->
-    <a href="/films/{{ film['id'] }}">
-      <div class="movie-card">
-        <img src="{{ film['poster'] }}" alt="Poster" class="movie-poster" />
-        <div class="movie-info">
-          <h3>{{ film['title'] }}</h3>
-          <p>Страна: {{ film['country'] }}</p>
-          <p>Год: {{ film['year'] }}</p>
-          <p class="rating">Рейтинг: {{ film['rating'] }}</p>
-        </div>
-      </div>
-    </a>
-    {%endfor%}
-    <!-- таких карточек много .... -->
-  
-  </div>
-  
-  <div class="pagination">
-    <!-- место для настройки пагинации -->
-  </div>
-{% endblock %}
+    <div class="faq-item">
+        <h3>Как зарегистрироваться?</h3>
+        <p>Нажмите "Начать регистрацию" и следуйте инструкциям бота.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Что делать, если я учитель?</h3>
+        <p>Нажмите кнопку "Зарегистрироваться учителю" и введите код доступа.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Как посмотреть рейтинг?</h3>
+        <p>Нажмите кнопку "Рейтинг пользователей", чтобы увидеть баллы по параллелям и классам.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Как выйти из аккаунта?</h3>
+        <p>Нажмите кнопку "Выход", чтобы удалить свою регистрацию.</p>
+    </div>
+</body>
+</html>
